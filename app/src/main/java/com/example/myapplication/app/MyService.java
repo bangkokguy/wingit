@@ -83,6 +83,8 @@ public class MyService extends Service {
             mText.append("_");
             i++;
             if (j++ == 10) {j = 0;
+                wm.removeView(mText);
+                wm.addView(mText, params);
                 mText.setTextColor(mText.getCurrentTextColor()+i);
                 mText.setText("geci      ");
                } 
